@@ -16,7 +16,8 @@ minimum LAMP Box for Vagrant
 
 Requirements
 ============
-
+https://downloads.chef.io/chef-dk/windows/
+vagrant plugin install vagrant-berkshelf vagrant-omnibus
 - VirtualBox
 - Vagrant
 
