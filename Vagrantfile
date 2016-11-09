@@ -44,5 +44,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision "file", source: "scripts/phpmyadmin.sh", destination: "phpmyadmin.install.sh"
   config.vm.provision "shell", inline: "chmod 770 /home/vagrant/*.sh; sed -i -e 's/\r$//' /home/vagrant/http-host.sh; sed -i -e 's/\r$//' /home/vagrant/phpmyadmin.install.sh"
 
+  config.vm.synced_folder "E:/performalogics/performalogics_bl", "/vagrant/performalogics.cent"
+
 
 end

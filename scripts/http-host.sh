@@ -1,18 +1,13 @@
 #!/bin/bash
 ## Apache VirtualHost Template with variable replacement
 
-if [ $# -lt 1 ]; then
-  echo "Usage: $(basename $0) domain" >&2
+if [ $# -lt 2 ]; then
+  echo "Usage: $(basename $0) domain path" >&2
   exit 1
 fi
 
 domain="$1"
 path="$2"
-
-if [ -z "$path" ]
-then
-$path="/vagrant/public/$domain"
-fi
 
 config="/etc/httpd/conf.d/"
 configdomain=$config$domain.conf
@@ -24,7 +19,8 @@ if [ ! -d "$path" ]; then
 fi
 
 if ! echo "
-<VirtualHost $domain:80>
+NameVirtualHost *:80
+<VirtualHost *:80>
     ServerName $domain
     ServerAlias $domain
     DocumentRoot $rootDir
