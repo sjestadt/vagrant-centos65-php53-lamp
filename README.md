@@ -10,7 +10,7 @@ Instructions
  * `choco install chocolateygui filezilla git greenshot mls-software-openssh git nodejs PowerShell putty virtualbox tortoisegit chefdk Cygwin`
 - Open Cygwin and run these commands
  * `git clone https://github.com/sjestadt/vagrant-centos65-php53-lamp.git php53`
- * `vagrant add box senta/centos65-php53-lamp`
+ * `vagrant box add senta/centos65-php53-lamp`
 - Edit Vagrantfile - change synched folders
  * `vagrant up`
  * `vagrant ssh`  - Get into the box
