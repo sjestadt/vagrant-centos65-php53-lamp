@@ -12,6 +12,7 @@ Instructions
  * `git clone https://github.com/sjestadt/vagrant-centos65-php53-lamp.git php53`
  * `vagrant box add senta/centos65-php53-lamp`
 - Edit Vagrantfile - change synched folders
+ * `cd php53`
  * `vagrant up`
  * `vagrant ssh`  - Get into the box
  
