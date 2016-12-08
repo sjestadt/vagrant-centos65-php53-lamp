@@ -8,11 +8,15 @@ Instructions
 - Open cmd.exe as Administrator and run these commands
  * `@powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"`
  * `choco install chocolateygui filezilla git greenshot mls-software-openssh git nodejs PowerShell putty virtualbox tortoisegit chefdk Cygwin`
+- Reboot your computer
 - Open Cygwin and run these commands
  * `git clone https://github.com/sjestadt/vagrant-centos65-php53-lamp.git php53`
  * `vagrant box add senta/centos65-php53-lamp`
-- Edit Vagrantfile - change synched folders
- * `cd php53`
+ * `vagrant plugin install vagrant-omnibus`
+ * `vagrant plugin install vagrant-berkshelf`
+- Edit Vagrantfile - change synced folders
+ * Open Windows PowerShell and change directory to where you cloned this project
+ * For me it was `C:\tools\cygwin\home\sean\php53`
  * `vagrant up`
  * `vagrant ssh`  - Get into the box
  
