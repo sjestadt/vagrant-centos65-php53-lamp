@@ -12,7 +12,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.berkshelf.enabled = true
 
   # Configure Network
-  config.vm.network :private_network, ip: "192.168.33.10"
+  config.vm.network :private_network, ip: "192.168.33.12"
 
   # Configure VirtualBox
   config.vm.provider "virtualbox" do |vb|
@@ -30,7 +30,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.add_recipe "mysql::server"
     chef.add_recipe "httpd"
     chef.add_recipe "php"
-    chef.add_recipe "webmin::default"
+    chef.add_recipe "webmin"
 
     chef.json = {
       :mysql => {

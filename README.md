@@ -9,8 +9,7 @@ Instructions
  * `@powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"`
  * `choco install chocolateygui filezilla git greenshot mls-software-openssh git nodejs PowerShell putty virtualbox tortoisegit chefdk Cygwin`
 - Open Cygwin and run these commands
- * `mkdir php53; cd php53;`
- * `git clone https://github.com/sjestadt/vagrant-centos65-php53-lamp.git`
+ * `git clone https://github.com/sjestadt/vagrant-centos65-php53-lamp.git php53`
  * `vagrant add box senta/centos65-php53-lamp`
 - Edit Vagrantfile - change synched folders
  * `vagrant up`
